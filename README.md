@@ -4,6 +4,16 @@ A local Streamlit app that imports my public Chess.com games, analyses every mov
 
 The idea: a PGN shows *what* was played, not *why*. So every weakness the app finds is treated as a **hypothesis** that has to be confirmed or rejected by exercises, not as a verdict.
 
+## Screenshots
+
+**Profile**: skill scores from ~100 of my own Rapid games, with the evidence behind each score.
+
+![Profile](docs/screenshots/profile.png)
+
+**Patterns**: contexts where my error rate is above my own average. Each one is a hypothesis for the Training section.
+
+![Patterns](docs/screenshots/patterns.png)
+
 ## How it works
 
 1. **Import**: downloads the public Chess.com archive (or reads a PGN) and stores games in SQLite.
@@ -53,6 +63,10 @@ Data is written to `data/coach.db` (git-ignored, it contains personal game data)
 | `src/coach.py` | Claude coach with rule-based fallback |
 | `src/store.py` | SQLite persistence |
 | `src/pipeline.py` | Import + analysis pipeline |
+
+## AI assistance
+
+This project was built with AI assistance: I used **Claude Code** as a coding partner for implementation and refactoring. The coach feature itself calls the Claude API at runtime (optional, see Setup).
 
 ## Known limitations
 
