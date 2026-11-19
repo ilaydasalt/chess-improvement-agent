@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.streamlit/secrets.toml
+.DS_Store
+
+# personal data: analysed games, profile, exercise attempts
+data/
+*.db
+*.pgn
+
+# Stockfish binary - download it yourself (see README)
+stockfish/
+*.exe
+*.zip
